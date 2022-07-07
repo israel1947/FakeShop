@@ -13,11 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FakeStore"
         tools:targetApi="31">
-        <!--splash screen activity page-->
+
+
+        <!-- splash screen activity page -->
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,11 +27,25 @@
             </intent-filter>
         </activity>
 
-        <!--Main activity page-->
+        <!-- Login activity page -->
+        <activity
+            android:name=".pages.auth.login.LoginActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".pages.auth.login.LoginFormActivity"
+            android:exported="false" />
+
+        <!-- Main activity page -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

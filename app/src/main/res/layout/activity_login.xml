@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".pages.auth.login.LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/bebas_neue"
+        android:paddingTop="25dp"
+        android:text="@string/app_name"
+        android:textColor="#393737"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="50"
+        android:background="@drawable/screenimg"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        tools:ignore="MissingConstraints">
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_200"
+        android:gravity="center"
+        android:weightSum="50"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center_vertical">
+
+            <Button
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                android:layout_gravity="center"
+                android:id="@+id/signGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:iconTint="@null"
+                app:icon="@drawable/google"
+                android:text="@string/login_with_google" />
+
+            <Button
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                android:layout_gravity="center"
+                android:id="@+id/signFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:iconTint="@null"
+                app:icon="@drawable/facebook"
+                android:text="@string/login_with_facebook" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/have_an_account"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/purple_500" />
+            <Button
+                android:id="@+id/goToForms"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/sign_in_up"
+                android:textSize="16sp"
+                android:textColor="@color/purple_500" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
