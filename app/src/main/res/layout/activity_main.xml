@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/containerView"
+        android:name="com.example.fakestore.fragments.Home.HomeFragment"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
