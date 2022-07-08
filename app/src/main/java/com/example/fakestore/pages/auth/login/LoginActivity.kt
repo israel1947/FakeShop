@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.example.fakestore.MainActivity
 import com.example.fakestore.R
@@ -18,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goLogin(){
-        val loginBtn:Button = findViewById(R.id.goToForms)
+        val loginBtn: TextView = findViewById(R.id.goToForms)
         loginBtn.setOnClickListener {
             val intent = Intent(this, LoginFormActivity::class.java);
             startActivity(intent);

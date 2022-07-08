@@ -20,6 +20,7 @@
 
     <!--messages-->
     <string name="have_an_account">Alrady have an account?</string>
+    <string name="dont_have_an_account">Dont have an account?</string>
     <string name="header_message_login">Log in to your account</string>
     <string name="header_message_register">Register your account</string>
     <string name="alert_message_exit">Want you exit of application?</string>
