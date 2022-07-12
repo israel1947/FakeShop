@@ -14,7 +14,6 @@
         android:theme="@style/Theme.FakeStore"
         tools:targetApi="31">
 
-
         <!-- splash screen activity page -->
         <activity
             android:name=".SplashActivity"
@@ -26,7 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <!-- Login activity page -->
         <activity
             android:name=".pages.auth.login.LoginActivity"
@@ -37,10 +35,16 @@
             android:name=".pages.auth.login.LoginFormActivity"
             android:exported="false" />
 
+        <!-- Register activity page -->
+        <activity
+            android:name=".pages.auth.register.RegisterActivity"
+            android:exported="false" />
+
         <!-- Main activity page -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
         </activity>
 
         <meta-data

@@ -4,9 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import com.example.fakestore.MainActivity
 import com.example.fakestore.R
 import com.example.fakestore.ValidForm
+import com.example.fakestore.pages.auth.register.RegisterActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -15,6 +17,7 @@ class LoginFormActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_form)
         login();
+        goToRegister();
     }
 
     //private var validForm:Boolean = validEmailForm() && validPasswordForm();
@@ -66,6 +69,14 @@ class LoginFormActivity : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java);
                 startActivity(intent);
             }
+        }
+    }
+
+    private fun goToRegister(){
+        val registerBtn: TextView = findViewById(R.id.goToRegisterPage)
+        registerBtn.setOnClickListener {
+                val intent = Intent(this, RegisterActivity::class.java);
+                startActivity(intent);
         }
     }
 }
