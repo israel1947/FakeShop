@@ -24,6 +24,9 @@
     <string name="header_message_login">Log in to your account</string>
     <string name="header_message_register">Register your account</string>
     <string name="alert_message_exit">Want you exit of application?</string>
+    <string name="email_form_required">Email is required</string>
+    <string name="email_form_incorrect">Email address is not correct</string>
+    <string name="password_form_required">Want you exit of application?</string>
 
     <!--Pleaceholders-->
     <string name="email_address">Email Address</string>
