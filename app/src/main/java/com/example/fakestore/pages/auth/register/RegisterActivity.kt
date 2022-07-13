@@ -1,18 +1,23 @@
 package com.example.fakestore.pages.auth.register
 
 import android.content.Intent
+import android.graphics.Paint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.fakestore.MainActivity
 import com.example.fakestore.R
 import com.example.fakestore.ValidForm
 import com.example.fakestore.pages.auth.login.LoginFormActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import java.util.zip.Inflater
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,6 +88,14 @@ class RegisterActivity : AppCompatActivity() {
 
     }
 
+    private fun alertDialogCustom(){
+        val alertDialogBuilder = AlertDialog.Builder(this,R.style.CustomAlertDialog);
+        alertDialogBuilder.setTitle(R.string.alert_error_register_alert)
+        alertDialogBuilder.setMessage(R.string.header_error_register_message)
+        alertDialogBuilder.setPositiveButton(R.string.confirm){ _, _ -> }
+
+        alertDialogBuilder.show();
+    }
 
     private fun registerNow(){
         val registerBtn: Button = findViewById(R.id.registerBtn)
@@ -91,6 +104,8 @@ class RegisterActivity : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java);
                 startActivity(intent);
                 sendData()
+            }else{
+                alertDialogCustom();
             }
         }
     }

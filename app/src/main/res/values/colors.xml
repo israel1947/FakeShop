@@ -14,5 +14,6 @@
     <color name="yellow_200">#FFCA27</color>
     <color name="green_100">#155E75</color>
     <color name="blue_500">#BBE6E4</color>
+    <color name="error">#FE6F6B</color>
 
 </resources>

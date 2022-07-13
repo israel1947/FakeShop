@@ -23,4 +23,11 @@
     <style name="NoBar" parent="Theme.AppCompat.NoActionBar">
         <item name="windowActionBar">false</item>
     </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/alert_dialog_round</item>
+        <item name="android:textColor">@color/blue_500</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
 </resources>

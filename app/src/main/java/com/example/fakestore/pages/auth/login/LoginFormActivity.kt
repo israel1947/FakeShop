@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.example.fakestore.MainActivity
 import com.example.fakestore.R
 import com.example.fakestore.ValidForm
@@ -62,12 +63,22 @@ class LoginFormActivity : AppCompatActivity() {
         return true;
     }
 
+    private fun alertDialogCustom(){
+        val alertDialogBuilder = AlertDialog.Builder(this,R.style.CustomAlertDialog);
+        alertDialogBuilder.setTitle(R.string.alert_error_login_alert)
+        alertDialogBuilder.setMessage(R.string.header_error_login_message)
+        alertDialogBuilder.setPositiveButton(R.string.confirm){ _, _ -> }
+        alertDialogBuilder.show();
+    }
+
     private fun login(){
         val logBtn: Button = findViewById(R.id.loginBtn)
         logBtn.setOnClickListener {
             if(validEmailForm() && validPasswordForm()){
                 val intent = Intent(this, MainActivity::class.java);
                 startActivity(intent);
+            }else{
+                alertDialogCustom();
             }
         }
     }

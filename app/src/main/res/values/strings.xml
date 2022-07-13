@@ -28,12 +28,16 @@
     <string name="email_form_incorrect">Email address is not correct</string>
     <string name="password_form_required">Want you exit of application?</string>
     <string name="term_and_conditions">I accept the terms and conditions</string>
-
+    <string name="header_error_register_message">The user could not be registered please check the data entered.</string>
+    <string name="header_error_login_message">Password or Email incorrect</string>
+    <string name="alert_error_login_alert">Incorrect Credentials</string>
+    <string name="alert_error_register_alert">Ups!!Something went wrong</string>
 
 
     <!--Pleaceholders-->
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
     <string name="repeat_password">Repeat Password</string>
+    <string name="icon_error">icon error</string>
 
 </resources>
