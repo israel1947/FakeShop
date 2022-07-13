@@ -25,13 +25,13 @@ class LoginFormActivity : AppCompatActivity() {
 
     private fun validEmailForm():Boolean{
         val email = findViewById<TextInputLayout>(R.id.email)
-        val emailTex = findViewById<TextInputEditText>(R.id.emailText)
+        val emailTex = findViewById<TextInputEditText>(R.id.emailText).text.toString()
 
-        if(emailTex.text.toString().isEmpty()){
+        if(emailTex.isEmpty()){
             email.error="Email address is required";
             return false;
         }
-        else if(!ValidForm.emailValid(emailTex.text.toString())) {
+        else if(!ValidForm.emailValid(emailTex)) {
             email.error="Email address is not correct";
             return false;
         }else{

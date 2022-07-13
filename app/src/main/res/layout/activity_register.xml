@@ -4,15 +4,174 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pages.auth.register.RegisterActivity">
+    tools:context=".pages.auth.login.LoginFormActivity">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="REGISTER"
-        android:textSize="38sp"
-        android:gravity="center"
+        android:background="@drawable/cyborg"
+        android:weightSum="10"
+        tools:ignore="MissingConstraints"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_round"
+        android:orientation="vertical"
+        android:weightSum="70"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:text="@string/header_message_register"
+            android:textColor="@color/blue_500"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <!--email input-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/RegisterEmail"
+                style="?attr/textInputOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_address"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:boxStrokeColor="@color/blue_500"
+                android:textColorHint="@color/blue_500"
+                app:hintTextColor="@color/blue_500"
+                app:startIconContentDescription="@string/email_address"
+                app:startIconDrawable="@drawable/ic_outline_email_24"
+                app:startIconTint="@color/blue_500"
+                app:endIconTint="@color/blue_500">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rgisterEmailText"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/gray"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--password input-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerPasswordTextField"
+                style="?attr/textInputOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                app:boxStrokeColor="@color/blue_500"
+                android:textColorHint="@color/blue_500"
+                app:hintTextColor="@color/blue_500"
+                app:startIconContentDescription="@string/password"
+                app:startIconTint="@color/blue_500"
+                app:endIconTint="@color/blue_500"
+                app:startIconDrawable="@drawable/password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerPasswordText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Repeat password input-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/repeatpasswordTextField"
+                style="?attr/textInputOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/repeat_password"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                app:boxStrokeColor="@color/blue_500"
+                android:textColorHint="@color/blue_500"
+                app:hintTextColor="@color/blue_500"
+                app:startIconContentDescription="@string/repeat_password"
+                app:startIconTint="@color/blue_500"
+                app:endIconTint="@color/blue_500"
+                app:startIconDrawable="@drawable/password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/repeatpasswordText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/termAndCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/term_and_conditions"
+                android:textColor="@color/blue_500"
+                android:textSize="18sp"/>
+
+            <Button
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/blue_500"
+                android:padding="15dp"
+                android:text="@string/register_btn"
+                android:textColor="@color/green_100"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/registerBtn"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="25dp"
+                android:paddingBottom="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/gray_dark"
+                    android:text="@string/have_an_account"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/goToLoginPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_message"
+                    android:textColor="@color/blue_500"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
