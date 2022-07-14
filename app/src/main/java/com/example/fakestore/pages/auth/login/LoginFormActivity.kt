@@ -3,9 +3,12 @@ package com.example.fakestore.pages.auth.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import com.example.fakestore.LoadingDialog
 import com.example.fakestore.MainActivity
 import com.example.fakestore.R
 import com.example.fakestore.ValidForm
@@ -75,6 +78,11 @@ class LoginFormActivity : AppCompatActivity() {
         val logBtn: Button = findViewById(R.id.loginBtn)
         logBtn.setOnClickListener {
             if(validEmailForm() && validPasswordForm()){
+
+                val loading = LoadingDialog(this);
+                loading.startLoading("Signing In");
+                Handler(Looper.getMainLooper()).postDelayed({ loading.isDismiss(); },2000)
+
                 val intent = Intent(this, MainActivity::class.java);
                 startActivity(intent);
             }else{

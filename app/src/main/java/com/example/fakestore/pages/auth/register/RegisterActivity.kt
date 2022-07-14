@@ -4,6 +4,8 @@ import android.content.Intent
 import android.graphics.Paint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
@@ -11,6 +13,7 @@ import android.widget.CheckBox
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.example.fakestore.LoadingDialog
 import com.example.fakestore.MainActivity
 import com.example.fakestore.R
 import com.example.fakestore.ValidForm
@@ -101,6 +104,11 @@ class RegisterActivity : AppCompatActivity() {
         val registerBtn: Button = findViewById(R.id.registerBtn)
         registerBtn.setOnClickListener {
             if(validEmailForm() && validPasswordForm() && checkTermAndCon() ){
+
+                val loading = LoadingDialog(this);
+                loading.startLoading("Registering User");
+                Handler(Looper.getMainLooper()).postDelayed({ loading.isDismiss(); },2000)
+
                 val intent = Intent(this, MainActivity::class.java);
                 startActivity(intent);
                 sendData()
